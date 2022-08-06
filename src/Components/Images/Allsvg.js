@@ -201,7 +201,6 @@ export function Responsive(props) {
   )
 }
 
-
 export function MaterialUI(props) {
   return (
     <svg
@@ -285,7 +284,6 @@ export function Twitter(props) {
     </svg>
   )
 }
-
 
 export function SocialGithub(props) {
 

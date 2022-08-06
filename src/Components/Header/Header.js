@@ -5,15 +5,15 @@ import './Header.css';
 import { motion } from "framer-motion";
 import { styled } from '@mui/material/styles';
 import Sidenav from '../Sidenav/Sidenav';
-
+import myLogo from '../../Assets/Images/myLogo.png'
 
 const Buttondata = styled(Button)({
     color: "#ffffff",
-    opacity: " 0.7",
+    opacity: " 0.8",
     textTransform: "capitalize",
-    fontSize: "14px",
+    fontSize: "1rem",
     fontFamily: "Maven Pro",
-    fontWeight: "500",
+    fontWeight: "600",
     margin: "5px",
     letterSpacing: "1px",
     transition: "all 0.3s linear",
@@ -21,14 +21,14 @@ const Buttondata = styled(Button)({
     display: "inline-block",
     transition: "all o.3s linear",
     "&:hover": {
-        color: "#ffc200",
-        opacity: "0.7"
+        color: "#cd5ff8",
+        opacity: "0.9"
     },
     "&:active": {
-        color: "#ffc200",
+        color: "#cd5ff8",
     },
     "&:focus": {
-        color: "#ffc200",
+        color: "#cd5ff8",
     }
 })
 
@@ -64,29 +64,34 @@ export default function Header() {
                 backgroundColor: [],
                 opacity: 1,
             }}
-            transition={{ ease: "easeOut", duration: 1, delay: 1.2 }}
+            transition={{ ease: "easeOut", duration: 0.5, delay: 0.5 }}
         >
             <Sidenav Toggle={Toggle} SetToggle={SetToggle}/>
             <AppBar className={navbar ? "navbar active" : "navbar"}>
                 <Toolbar 
                     paddingX={{ xxs: "1rem", md: "8rem" }}
                 >
+                    <img src={myLogo} alt="." className="App-logo" />
                     <Typography
                         variant='h4'
                         sx={{
                             fontFamily: "Dancing Script",
-                            color: "#ffc200",
-                            opacity: "0.7",
+                            color: "#cd5ff8",
+                            opacity: "0.9",
                             cursor: "pointer",
+                            ml:"0.5rem",
                             "&:hover": {
-                                opacity: "0.9",
+                                opacity: "0.7",
                             }
                         }}
                         onClick={handleReload}
                     >
-                        Yogita
+                        Thamizh
                     </Typography>
-                    <Box sx={{ marginLeft: "auto" }} className="NavbarItems">
+                    <Box
+                        sx={{ marginLeft: "auto" }} 
+                        className="NavbarItems"
+                    >
 
                         <Buttondata disableRipple className='navBtn'>
                             <Link to="about" spy={true} smooth={true} offset={50} duration={500}>About</Link>

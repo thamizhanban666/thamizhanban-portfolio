@@ -4,19 +4,31 @@ const theme = createTheme({
     typography: {
         h1: {
             fontFamily: "Maven Pro",
-            fontSize: "2.32rem",
+            fontSize: "2.30rem",
             fontWeight: "600",
+        },
+        h3: {
+            fontFamily: "Maven Pro",
+            fontSize: "2.1rem",
+            letterSpacing: "0.05em",
+            fontWeight: "600",
+            color:"#cd5ff8"
         },
         h4: {
             fontFamily: "Maven Pro",
-            fontSize: "2rem",
-            letterSpacing: "0.1em",
+            fontSize: "1.9rem",
+            letterSpacing: "0.09em",
+        },
+        h6: {
+            fontFamily: "Maven Pro",
+            fontSize: "1rem",
+            letterSpacing: "0.09em",  
         },
         p: {
-            fontSize: "18px",
+            fontSize: "1.25rem",
             fontWeight: "300",
             lineHeight: "1.5",
-            color: "#5b5b5b",
+            color: "#bbb",
         }
     },
     mode: "dark",

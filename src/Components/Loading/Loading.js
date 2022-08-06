@@ -1,14 +1,5 @@
-import Lottie from "react-lottie";
-import * as location from "../../Lottie/Loading.json";
 import { Box, Stack } from "@mui/material";
-const defaultOptions1 = {
-  loop: true,
-  autoplay: true,
-  animationData: location.default,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
+import GreetingLottie from "../GreetingLottie";
 
 function Loader() {
   return (
@@ -19,7 +10,9 @@ function Loader() {
         alignItems="center"
         paddingTop={"40vh"}
       >
-        <Lottie options={defaultOptions1} height={200} width={200} />
+        <Box height={200} width={200} >
+          <GreetingLottie animationPath="Lottie/Loading.json" />
+        </Box>
       </Stack>
     </Box>
   );

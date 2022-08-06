@@ -71,7 +71,6 @@ function Skills() {
                                     <Javascript height="40px" fill="#ffc200" />
                                     <InnerText>JavaScript</InnerText>
                                 </Box>
-
                                 <Box className="skillItem">
                                     <SymbolReact height="40px" fill="#ffc200" />
                                     <InnerText>React</InnerText>
@@ -84,7 +83,6 @@ function Skills() {
                                     <MaterialUI height="40px" fill="#ffc200" />
                                     <InnerText>Material UI</InnerText>
                                 </Box>
-
                                 <Box className="skillItem">
                                     <Github height="40px" fill="#ffc200" />
                                     <InnerText>Github</InnerText>

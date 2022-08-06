@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-.animated {
+/* .animated {
     position: relative;
 }
 
@@ -26,6 +26,17 @@
 
 .animated-item:nth-child(2n+2) {
     animation-delay: 2s;
+} */
+
+.typewriterWrapper {
+  font-size: 1.7rem;
+  color: #be6adf;
+  font-weight: 600;
+}
+
+.typewriterCursor {
+  font-size: 2rem;
+  color: #fff;
 }
 
 @keyframes BottomTotop {
@@ -63,7 +74,7 @@
 }
 
 .resume {
-    color: #ffc200;
+    color: #cd5ff8;
     text-decoration: none;
 }
 
@@ -74,7 +85,7 @@
     justify-content: flex-start;
 }
 
-.femaleDev {
+.maleDev {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,5 +122,10 @@
     .webDev {
         width: 300px;
         height: 300px;
+    }
+    .typewriterWrapper {
+        font-size: 1.3rem;
+        color: #be6adf;
+        font-weight: 600;
     }
 }
