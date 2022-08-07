@@ -15,11 +15,11 @@ const Sidenav = ({ Toggle, SetToggle }) => {
     color: "#fff",
     fontFamily: "Maven pro",
     fontSize: "1rem",
-    fontWeight: 500,
+    fontWeight: 600,
     marginLeft: "10px",
     "&:hover": {
       background: "none",
-      color: "#ffc200",
+      color: "#cd5ff8",
     },
   });
 
@@ -27,8 +27,9 @@ const Sidenav = ({ Toggle, SetToggle }) => {
     display: "flex",
     justifyContent:"center",
     alignItems: "center",
-    color: "#ffc200",
-    opacity: "0.7",
+    flexWrap: "nowrap",
+    color: "#cd5ff8",
+    opacity: "0.8",
     cursor: "pointer",
   });
   return (
@@ -36,11 +37,11 @@ const Sidenav = ({ Toggle, SetToggle }) => {
       <Box className={Toggle ? "menu" : "menu out"}>
         <Stack
           direction={"column"}
-          justifyContent={{ xxs:"center" ,xs:"center", sm:"flex-start"}}
-          alignItems={{ xxs:"center" ,xs:"center", sm:"flex-start"}}
-          textAlign={{xxs:"center", xs:"left"}}
+          justifyContent={ "flex-start"}
+          alignItems={"flex-start"}
+          textAlign={"left"}
           spacing={6}
-          padding={{xxs:"10rem 0rem", xs:"10rem 0.3rem", sm:"10rem 5rem"}}
+          padding={{ xxs: "5rem 2rem", xs: "5rem 3rem", sm: "5rem 5rem"}}
         >
           <Typo className="sidebarIcons">
             <DescriptionIcon />

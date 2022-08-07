@@ -11,8 +11,8 @@ import Fade from 'react-reveal/Fade';
 import GreetingLottie from '../GreetingLottie';
 
 const ResumeButton = styled(Button)({
-  color: "#fff",
-  border: "1.5px solid #cd5ff8",
+  color: "var(--txt)",
+  border: "1.5px solid var(--txt-sec-darker)",
   textTransform: "capitalize",
   fontSize: "16px",
   fontWeight:"bold",
@@ -20,11 +20,11 @@ const ResumeButton = styled(Button)({
   fontFamily: "Maven Pro",
   padding: "0.3rem 1rem",
   "&:hover": {
-    backgroundColor: "rgb(205,95,248, 0.2)",
-    transition: "all 0.3s linear",
+    borderWidth:"3px",
+    // transition: "all 0.3s ease-in",
   },
   "&:focus": {
-    backgroundColor: "rgba(255, 194, 0, 0.07)"
+    backgroundColor: "#edd4f7"
   },
 
 })
@@ -38,8 +38,9 @@ function About() {
       transition={{ ease: "easeOut", duration: 0.5, delay: 1 }}
     >
       <Box
-        paddingTop={{ xxs: "8vh", xs: "8vh", sm:"9vh", md:"18vh", lg: "18vh" }}
-        sx={{ minHeight: "100vh", color: "#fff" }} id="about">
+        paddingTop={{ xxs: "12vh", xs: "12vh", sm:"13vh", md:"15vh", lg: "15vh" }}
+        sx={{ minHeight: "100vh", color: "var(--txt)" }} id="about"
+      >
         <Grid container
           direction="row"
           justifyContent="center"
@@ -76,8 +77,7 @@ function About() {
               <Typography variant="p">
                 A Full Stack Developer specialised in building web applications
                 using a wide range of skills sets like HTML, CSS, JavaScript, React.js, Node.js, MongoDB, MySQL etc.<br/>
-                Also, built single-page applications (SPA), responsive web design, and
-                UI using React.js .
+                Also, built single-page applications (SPA), responsive web design, and UI using React.js .
               </Typography>
             </Box>
             <Box sx={{ padding: "1.5rem 0 0 2rem" }}>
@@ -91,15 +91,13 @@ function About() {
               </ResumeButton>
             </Box>
           </Grid>
-          <Grid item sm={12} md={12} lg={6}
+          <Grid item xxs={12} xs={12} sm={12} md={12} lg={6}
             sx={{ paddingTop: "0rem" }}
             className="maleDev"
           >
-            {/* <Box>
-              <Developer height="350px" width="600px" className="webDev" />
-            </Box> */}
-            <GreetingLottie animationPath="Lottie/coding.json" />
-
+            <Box  width={{ xxs:"90vw",xs:"80vw",sm:"70vw", md: "50vw" }}>
+              <GreetingLottie animationPath="Lottie/coding.json" />
+            </Box>
           </Grid>
         </Grid>
       </Box>

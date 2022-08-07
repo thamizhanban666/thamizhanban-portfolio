@@ -3,14 +3,25 @@ import Divider from '@mui/material/Divider';
 import { Box } from '@mui/system'
 import React from 'react'
 import { styled } from '@mui/material/styles';
-import { SkillSvg, Html5, Css3, Javascript, SymbolReact, Bootstrap, Github, Gear, Responsive, MaterialUI } from '../Images/Allsvg'
 import './Skills.css';
 import Fade from 'react-reveal/Fade';
-
+import GreetingLottie from '../GreetingLottie';
+import htmlIcon from '../../Assets/svg-images/html-icon.svg'
+import cssIcon from '../../Assets/svg-images/css-icon.svg'
+import javascriptIcon from '../../Assets/svg-images/javascript-icon.svg'
+import reactIcon from '../../Assets/svg-images/react-icon.svg'
+import bootstrapIcon from '../../Assets/svg-images/bootstrap-icon.svg'
+import muiIcon from '../../Assets/svg-images/mui-icon.svg'
+import githubIcon from '../../Assets/svg-images/github-icon.svg'
+import nodejsIcon from '../../Assets/svg-images/nodejs-icon.svg'
+import mongodbIcon from '../../Assets/svg-images/mongodb-icon.svg'
+import mysqlIcon from '../../Assets/svg-images/mysql-icon.svg'
+import vscodeIcon from '../../Assets/svg-images/vscode-icon.svg'
+import postmanIcon from '../../Assets/Images/postman-icon.png'
 
 const InnerText = styled(Typography)({
     color: "#fff",
-    opacity: "0.6",
+    opacity: "0.8",
     fontSize: "14px",
     fontWeight: "500",
     lineHeight: "1.5",
@@ -23,7 +34,7 @@ function Skills() {
     return (
         <>
             <Box
-                paddingTop={{ xxs:"8vh", xs:"8vh", sm:"9vh", md:"16vh", lg: "16vh" }}
+                paddingTop={{ xxs:"2vh", xs:"2vh", sm:"3vh", md:"6vh", lg: "6vh" }}
                 sx={{ minHeight: "100vh" }}
                 id="skills"
             >
@@ -51,49 +62,85 @@ function Skills() {
                         paddingX={{ xxs: "1rem", md: "8rem" }}
                     >
 
-                        <Grid item xxs={12} xs={12} sm={12} md={12} lg={4} className="skillSvgConatiner">
-                            <Box >
-                                <SkillSvg className="skillDev" />
+                        <Grid item xxs={12} xs={12} sm={12} md={12} lg={5} className="skillSvgConatiner">
+                            <Box width={{ xxs: "90vw", xs: "80vw", sm: "70vw", md: "50vw", lg:"fit-content" }}>
+                                <GreetingLottie animationPath="Lottie/skills.json" />
                             </Box>
                         </Grid>
 
-                        <Grid item xxs={12} xs={12} sm={12} md={12} lg={8} className="skillContainer">
+                        <Grid item xxs={12} xs={12} sm={12} md={12} lg={7} className="skillContainer">
                             <Stack sx={{ marginTop: "20px", color: "gray", display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
                                 <Box className="skillItem">
-                                    <Html5 height="40px" fill="#ffc200" />
+                                    <Box className={"icon-box"}>
+                                        <img src={htmlIcon} alt="HTML5" />
+                                    </Box>
                                     <InnerText>HTML5</InnerText>
                                 </Box>
                                 <Box className="skillItem">
-                                    <Css3 height="40px" fill="#ffc200" />
+                                    <Box className={"icon-box"}>
+                                        <img src={cssIcon} alt="CSS3"/>
+                                    </Box>
                                     <InnerText>CSS3</InnerText>
                                 </Box>
                                 <Box className="skillItem">
-                                    <Javascript height="40px" fill="#ffc200" />
+                                    <Box className={"icon-box"}>
+                                        <img src={javascriptIcon} alt="JS"/>
+                                    </Box>
                                     <InnerText>JavaScript</InnerText>
                                 </Box>
                                 <Box className="skillItem">
-                                    <SymbolReact height="40px" fill="#ffc200" />
+                                    <Box className={"icon-box"}>
+                                        <img src={reactIcon} alt="React"/>
+                                    </Box>
                                     <InnerText>React</InnerText>
                                 </Box>
                                 <Box className="skillItem">
-                                    <Bootstrap height="40px" fill="#ffc200" />
+                                    <Box className={"icon-box"}>
+                                        <img src={bootstrapIcon} alt="Bootstrap"/>
+                                    </Box>
                                     <InnerText>Bootstrap</InnerText>
                                 </Box>
                                 <Box className="skillItem">
-                                    <MaterialUI height="40px" fill="#ffc200" />
+                                    <Box className={"icon-box"}>
+                                        <img src={muiIcon} alt="MUI"/>
+                                    </Box>
                                     <InnerText>Material UI</InnerText>
                                 </Box>
                                 <Box className="skillItem">
-                                    <Github height="40px" fill="#ffc200" />
+                                    <Box className={"icon-box"}>
+                                        <img src={nodejsIcon} alt="Node.js"/>
+                                    </Box>
+                                    <InnerText>Node.js</InnerText>
+                                </Box>
+                                <Box className="skillItem">
+                                    <Box className={"icon-box"}>
+                                        <img src={mongodbIcon} alt="MongoDB"/>
+                                    </Box>
+                                    <InnerText>MongoDB</InnerText>
+                                </Box>
+                                <Box className="skillItem">
+                                    <Box className={"icon-box"}>
+                                        <img src={mysqlIcon} alt="MySQL"/>
+                                    </Box>
+                                    <InnerText>My SQL</InnerText>
+                                </Box>
+                                <Box className="skillItem">
+                                    <Box className={"icon-box"}>
+                                        <img src={githubIcon} alt="Github"/>
+                                    </Box>
                                     <InnerText>Github</InnerText>
                                 </Box>
                                 <Box className="skillItem">
-                                    <Gear height="40px" fill="#ffc200" />
-                                    <InnerText>REST API</InnerText>
+                                    <Box className={"icon-box"}>
+                                        <img src={vscodeIcon} alt="VScode"/>
+                                    </Box>
+                                    <InnerText>VS code</InnerText>
                                 </Box>
                                 <Box className="skillItem">
-                                    <Responsive height="40px" fill="#ffc200" />
-                                    <InnerText>Responsive Designs</InnerText>
+                                    <Box className={"icon-box"}>
+                                        <img src={postmanIcon} alt="Postman" style={{ width: "42px",height:"42px"}} />
+                                    </Box>
+                                    <InnerText>Postman</InnerText>
                                 </Box>
 
                             </Stack>

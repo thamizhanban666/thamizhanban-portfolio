@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-const theme = createTheme({
+const muiTheme = createTheme({
     typography: {
         h1: {
             fontFamily: "Maven Pro",
@@ -12,7 +12,7 @@ const theme = createTheme({
             fontSize: "2.1rem",
             letterSpacing: "0.05em",
             fontWeight: "600",
-            color:"#cd5ff8"
+            color:"var(--txt-secondary)"
         },
         h4: {
             fontFamily: "Maven Pro",
@@ -28,7 +28,7 @@ const theme = createTheme({
             fontSize: "1.25rem",
             fontWeight: "300",
             lineHeight: "1.5",
-            color: "#bbb",
+            color: "var(--txt-2)",
         }
     },
     mode: "dark",
@@ -62,4 +62,4 @@ const theme = createTheme({
     },
 });
 
-export default theme;
+export default muiTheme;

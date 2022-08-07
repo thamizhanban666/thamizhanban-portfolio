@@ -30,13 +30,14 @@
 
 .typewriterWrapper {
   font-size: 1.7rem;
-  color: #be6adf;
+  color: var(--txt-sec-darker);
   font-weight: 600;
 }
 
 .typewriterCursor {
   font-size: 2rem;
-  color: #fff;
+  color: var(--txt);
+  margin-left: 2px;
 }
 
 @keyframes BottomTotop {
@@ -74,7 +75,7 @@
 }
 
 .resume {
-    color: #cd5ff8;
+    color: var(--txt-secondary);
     text-decoration: none;
 }
 
@@ -125,7 +126,5 @@
     }
     .typewriterWrapper {
         font-size: 1.3rem;
-        color: #be6adf;
-        font-weight: 600;
     }
 }

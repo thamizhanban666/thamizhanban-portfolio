@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppBar, Typography, Toolbar, Button, Box } from '@mui/material';
 import { Link } from 'react-scroll';
 import './Header.css';
@@ -6,12 +6,15 @@ import { motion } from "framer-motion";
 import { styled } from '@mui/material/styles';
 import Sidenav from '../Sidenav/Sidenav';
 import myLogo from '../../Assets/Images/myLogo.png'
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { MyContext } from '../../App';
 
 const Buttondata = styled(Button)({
-    color: "#ffffff",
+    color: "var(--txt)",
     opacity: " 0.8",
     textTransform: "capitalize",
-    fontSize: "1rem",
+    fontSize: "1.1rem",
     fontFamily: "Maven Pro",
     fontWeight: "600",
     margin: "5px",
@@ -21,14 +24,14 @@ const Buttondata = styled(Button)({
     display: "inline-block",
     transition: "all o.3s linear",
     "&:hover": {
-        color: "#cd5ff8",
-        opacity: "0.9"
+        color: "var(--txt-sec-darker)",
+        // opacity: "0.9"
     },
     "&:active": {
-        color: "#cd5ff8",
+        color: "var(--txt-secondary)",
     },
     "&:focus": {
-        color: "#cd5ff8",
+        color: "var(--txt-secondary)",
     }
 })
 
@@ -36,6 +39,10 @@ const Buttondata = styled(Button)({
 export default function Header() {
     const [navbar, setNavbar] = useState(false);
     const [Toggle, SetToggle] = useState(false);
+    const { theme, setTheme } = useContext(MyContext);
+    const switchTheme = () => {
+            setTheme(theme === 'dark' ? 'light' : 'dark');
+    }
 
     const changeBackground = () => {
         if (window.scrollY >= 20) {
@@ -67,16 +74,22 @@ export default function Header() {
             transition={{ ease: "easeOut", duration: 0.5, delay: 0.5 }}
         >
             <Sidenav Toggle={Toggle} SetToggle={SetToggle}/>
-            <AppBar className={navbar ? "navbar active" : "navbar"}>
-                <Toolbar 
-                    paddingX={{ xxs: "1rem", md: "8rem" }}
+            <AppBar className={navbar ? "navbar active" : "navbar"} sx={{ padding:{xxs:"0 1rem",sm:"0 1.5rem"}}} >
+                <Box 
+                    paddingX= "1rem"
+                    paddingY="0.3rem"
+                    display="flex"
+                    // justifyContent="space-between"
+                    alignItems="center"
                 >
-                    <img src={myLogo} alt="." className="App-logo" />
-                    <Typography
+                    <Box flexGrow={5} >
+                        <img src={myLogo} alt="." className="App-logo" />
+                    </Box>
+                    {/* <Typography
                         variant='h4'
                         sx={{
                             fontFamily: "Dancing Script",
-                            color: "#cd5ff8",
+                            color: "var(--txt-secondary)",
                             opacity: "0.9",
                             cursor: "pointer",
                             ml:"0.5rem",
@@ -87,9 +100,11 @@ export default function Header() {
                         onClick={handleReload}
                     >
                         Thamizh
-                    </Typography>
+                    </Typography> */}
                     <Box
                         sx={{ marginLeft: "auto" }} 
+                        justigfySelf={"end"}
+                        flexGrow={{md:4, lg:3}}
                         className="NavbarItems"
                     >
 
@@ -112,25 +127,29 @@ export default function Header() {
                             <Link to="contact" spy={true} smooth={true} offset={50} duration={500}>Contact</Link>
                         </Buttondata>
                     </Box>
-                    <Box className="icon">
-                        <Box pl={2}>
-                            <div
-                                style={{
-                                    zIndex: "6",
-                                    position: "fixed",
-                                    top: "1rem",
-                                    right: "1rem",
-                                }}
-                                className={`nav-icon-5 ${Toggle ? "open" : ""}`}
-                                onClick={() => SetToggle(!Toggle)}
-                            >
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                    <Box display={"flex"} justifyContent={"end"} flexGrow={1} >
+                        <Box onClick={switchTheme} sx={{cursor:"pointer"}} >
+                            {theme === 'dark' ?
+                                <LightModeIcon sx={{color: "gold",width:"25px" }} className="theme-btn" />
+                                :
+                                <Box className="moon-div theme-btn">
+                                <DarkModeIcon sx={{color: "#fff",width:"20px" }} />
+                                </Box>
+                            }
+                        </Box>
+                        <Box className="icon">
+                            <Box pl={0}>
+                                <div className={`nav-icon-5 ${Toggle ? "open" : ""}`}
+                                    onClick={() => SetToggle(!Toggle)}
+                                >
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </Box>
                         </Box>
                     </Box>
-                </Toolbar>
+                </Box>
             </AppBar>
         </motion.div>
     )

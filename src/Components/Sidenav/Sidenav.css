@@ -10,7 +10,7 @@
   .menu {
     position: fixed;
     transform: translateX(0);
-    width: 60vw;
+    width: fit-content;
     height: 100vh;
     top: 0;
     right: 0;
@@ -30,7 +30,7 @@
     display: none;
   }
 
-  @media screen and (min-width: 401px) and (max-width: 768px) {
+  @media screen and (min-width: 401px) and (max-width: 850px) {
     .menuDiv {
       display: block;
     }
@@ -39,9 +39,6 @@
   @media screen and (min-width: 0px) and (max-width: 500px) {
     .menuDiv {
       display: block;
-    }
-    .sidebarIcons {
-      flex-direction: column !important;
     }
   }
   

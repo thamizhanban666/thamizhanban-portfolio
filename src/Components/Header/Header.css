@@ -3,13 +3,13 @@
     box-shadow: none !important;
     position: fixed !important;
     top: 0;
-    padding: 0 2rem;
+    /* padding: 0 1rem; */
     z-index: 999;
 }
 
 .navbar.active {
-    background-color: rgba(12, 12, 13, 0.89) !important;
-    box-shadow: 1px 1px 20px rgb(0, 0, 0) !important;
+    background-color: var(--bg-header) !important;
+    box-shadow: 1px 1px 20px var(--bg-header) !important;
     backdrop-filter: blur(5px);
 }
 
@@ -20,7 +20,7 @@
     height: 2px;
     left: 0;
     bottom: 0;
-    background-color: #cd5ff8;
+    background-color: var(--txt-secondary);
     transition: 0.3s all linear;
 }
 
@@ -36,12 +36,12 @@
     height: 2px;
     left: 0;
     bottom: 0;
-    background-color: #cd5ff8;
+    background-color: var(--txt-secondary);
     transition: 0.3s all linear;
 }
 
 .navBtn2:hover::before {
-    width: 75px;
+    width: 80px;
     opacity: 0.7;
 }
 
@@ -56,7 +56,7 @@
 .nav-icon-5 {
     width: 30px;
     height: 20px;
-    margin: 0 20px;
+    margin: 0 0 0 2rem;
     position: relative;
     cursor: pointer;
     display: inline-block;
@@ -64,8 +64,7 @@
 }
 
 .nav-icon-5 span {
-    background-color: #ffc200;
-    opacity: 0.7;
+    background-color: var(--bg) ;
     position: absolute;
     border-radius: 2px;
     transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
@@ -74,7 +73,7 @@
     transition-duration: 500ms;
 }
 .nav-icon-5 span:hover {
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
 .nav-icon-5 span:nth-child(1) {
@@ -118,7 +117,31 @@
     top: 13px;
 }
 
-@media screen and (min-width: 0px) and (max-width: 750px) {
+.NavbarItems{
+    display: flex;
+    justify-content: space-around;
+}
+
+.theme-btn{
+    animation: fadeIn 3s;
+}
+
+.moon-div{
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App-logo {
+  height: 3rem;
+  cursor:none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 850px) {
     .icon {
         display: block;
     }
@@ -128,14 +151,13 @@
     }
 }
 
-.App-logo {
-  height: 2.2rem;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 10s linear;
+    animation: App-logo-spin infinite 8s linear;
+  }
+  .App-logo:hover {
+    animation: App-logo-spin-hover infinite 0.7s linear;
   }
 }
 
@@ -146,4 +168,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes App-logo-spin-hover {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

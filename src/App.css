@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Maven+Pro:wght@400;700&family=Open+Sans&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* body {
-  font-family: "Maven Pro", sans-serif;
-  background-color: #171126;
-} */
+
 body {
   margin: 0;
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+}
+.bg{
+  background-image: var(--background-image) ;
 }
 
 ::-webkit-scrollbar {
@@ -21,6 +21,54 @@ body {
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: #171126;
+  background-color: #7c1ca1;
   border-radius: 25px;
+}
+
+:root{
+  --background-image: linear-gradient(to left, rgb(27, 20, 41), rgb(20 15 35));
+  --txt: #fff;
+  --txt-2:#aaa;
+  --txt-secondary: #cd5ff8;
+  --txt-sec-darker: #b700ff;
+  --txt-sec-lighter: #d887f8;
+  --bg-header: #130718;
+  --bg-primary: rgb(23, 13, 43);
+  --bg: #f0ddff;
+  --bg-active: rgba(109,32,197,.84);
+  --bg-footer: #0a0416;
+  --backdrop: rgba(0, 0, 0, 0.75);
+  --nav-active: #c95bf5;
+  --border-primary: #8a49a8;
+  --logo-primary: #ce5ff8;
+  --social-icon: #700c86;
+  --social-shadow: #801f95;
+  --preloader: #0c0513;
+  --bg-modal: #100D19;
+  --modal-border: 1px solid rgba(0,0,0,.125);
+  --drawer-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+[data-theme='light']{
+  --background-image: linear-gradient(to left, rgb(234, 241, 255),rgb(246, 249, 255));
+  --txt: #222;
+  --txt-2:#666;
+  --txt-secondary: #b700ff;
+  --txt-sec-darker: #8400b8;
+  --txt-sec-lighter: #d36afd;
+  --bg-header: #cfd9ec;
+  --bg-primary: rgb(230, 227, 238);
+  --bg: #9411ff;
+  --bg-active: rgba(109,32,197,.84);
+  --bg-footer: transparent;
+  --backdrop: rgba(0, 0, 0, 0.75);
+  --nav-active: #c95bf5;
+  --border-primary: #8a49a8;
+  --logo-primary: #ce5ff8;
+  --social-icon: #700c86;
+  --social-shadow: #801f95;
+  --preloader: #fafafa;
+  --bg-modal: #fafafa;
+  --modal-border: none;
+  --drawer-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 }
