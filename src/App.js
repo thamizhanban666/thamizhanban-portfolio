@@ -1,10 +1,12 @@
 import './App.css';
 import Main from '../src/Components/Main/Main';
+import MyProjectPage from '../src/Components/Projects/AllProjects/MyprojectPage';
 import { ThemeProvider } from "@mui/system";
 import muiTheme from "./theme";
 import React, { useState, useEffect } from 'react';
 import Loader from '../src/Components/Loading/Loading.js';
 import useLocalStorage from 'use-local-storage'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export const MyContext = React.createContext();
 const MyProvider = MyContext.Provider;
@@ -24,7 +26,10 @@ function App() {
           {loading === true ? (
             <Loader />
           ) : (
-            <Main />
+                <Routes>
+                  <Route path='/' element={<Main />} />
+                  <Route path='/projects' element={<MyProjectPage />} />
+                </Routes>
           )
           }
         </div>
