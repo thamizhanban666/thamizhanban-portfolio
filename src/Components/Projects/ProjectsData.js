@@ -1,85 +1,45 @@
-import Qkart from '../../Assets/Images/Qkart.png'
-// import one from '../assets/svg/projects/spb.png'
-// import tech from '../assets/svg/projects/pythonlog.svg'
-// import three from '../assets/svg/projects/mars.svg'
-// import scb from '../assets/svg/projects/scb.svg'
-// import etrn from '../assets/img/expensetracker.png'
-// import keys from '../assets/svg/projects/keys.png'
-// import gnco from '../assets/img/gnco.png'
-// import pytho from '../assets/svg/projects/python.png'
+import ChatApp from '../../Assets/Images/ChatApp.png'
+import StackOverflow from '../../Assets/Images/StackOverflow.png'
+import Calculator from '../../Assets/Images/Calculator.png'
+import Portfolio from '../../Assets/Images/Portfolio.png'
+// import ChatApp from '../../Assets/svg-images/ChatApp.svg'
 
 export const projectsData = [
 	{
 		id: 1,
-		projectName: 'Expense Tracker',
-		projectDesc: 'A React Native iOS/Android App to keep track of your expense (or anything else, like a to do list with deadlines). Includes navigation, authentication, and persistence of data.',
-		tags: ['React', 'React Native', 'Javascript', 'Expo', 'CSS', 'Firebase'	],
-		code: 'https://github.com/mathcodes/react-native-apps',
-		demo: 'https://github.com/mathcodes/react-native-apps',
-		image: Qkart
+		projectName: 'Chat application',
+		projectDesc: 'A responsive React.js app with one to one and group chat having features of notifications, online status, messages seen or not with the indication of single or double tick respectively.',
+		tags: ['React.js', 'Javascript', 'HTML', 'CSS', 'Chakra UI', 'Node.js','Express.js', 'MongoDB', 'JWT Auth', 'bcryptjs', 'socket.io'	],
+		code: ['https://github.com/thamizhanban666/chat-app-frontend', 'https://github.com/thamizhanban666/chat-app-backend'],
+		demo: 'https://chat-app-thamizhanban.netlify.app',
+		image: ChatApp
 	},
 	{
 		id: 2,
-		projectName: 'Gladis & Co',
-		projectDesc: 'Freelance gig to fix issues with website in wordpress. Used advanced Javascript methods and CSS selectors that could find a needle in a haystack to override the entire site.',
-		tags: ['WordPress', 'GoDaddy', 'JS', 'CSS', 'HTML', 'server-side rendering', 'css selectors'],
-		code: 'https://www.gladisandco.com',
-		demo: 'https://www.gladisandco.com',
-		image: Qkart
+		projectName: 'Stack Overflow Clone',
+		projectDesc: 'A clone of stack overflow web app with a responsive design in which a user should register or login to ask question with tags and answer to the questions in detail in a text-editor',
+		tags: ['React.js', 'Javascript', 'HTML', 'CSS', 'Bootstrap', 'Node.js', 'Express.js', 'MongoDB','Mongoose','JWT Auth', 'bcryptjs'],
+		code: ['https://github.com/thamizhanban666/stack-overflow-clone-frontend', 'https://github.com/thamizhanban666/stack-overflow-clone-backend'],
+		demo: 'https://stack-overflow-clone-thamizhanban.netlify.app/',
+		image: StackOverflow
 	},
 	{
 		id: 3,
-		projectName: 'Super Pantry Buddy',
-		projectDesc: 'Built with a team of three developers, this app uses the MERN stack to provide users with a responsive, customizable experience to search and save recipes by entering in any number of ingredients.',
-		tags: ['MERN', 'ORM', 'OAuth', 'Jest', 'Bulma'],
-		code: 'https://github.com/mathcodes/spb/',
-		demo: 'https://superpantrybuddy.herokuapp.com/',
-		image: Qkart
+		projectName: 'Calculator',
+		projectDesc: 'A dom manipulation calculator with functionality like addition, subtraction, multiplication, division, percentage, clear all, back, last history, and automated braces which will open or close the brace based upon the equation.',
+		tags: ['HTML', 'CSS', 'Javascript', 'Dom manipulation'],
+		code: ['https://github.com/thamizhanban666/my_Project/tree/main/calculator'],
+		demo: 'https://thamizhanbanprojects.netlify.app/calculator',
+		image: Calculator
 	},
 	{
 		id: 4,
-		projectName: 'A Python Log',
-		projectDesc: 'A full stack website with blog, using Python to run the backend, and allowing users to post, share, and delete content. A user-centric and mobile-friendly design adds functionality and a responsive UI.',
-		tags: ['Python', 'CSS', 'HTML', 'JS', 'Django', 'Tkinter', 'JSON', 'Illustrator', 'CRUD'],
-		code: 'https://github.com/mathcodes/PythonLog/',
-		demo: 'https://jonspythonlog.herokuapp.com/',
-		image: Qkart
+		projectName: 'Portfolio',
+		projectDesc: 'My personal portfolio which is you are currently viewing built with react.js',
+		tags: ['React.js', 'Javascript', 'HTML', 'CSS', 'Material UI', 'Netlify'],
+		code: ['https://github.com/thamizhanban666/thamizhanban-portfolio'],
+		demo: 'https://thamizhanban.netlify.app/',
+		image: Portfolio
 	},
-	{
-		id: 5,
-		projectName: 'Mars Project',
-		projectDesc: 'Weather forecast systems and applications predict weather conditions based on multiple parameters.',
-		tags: ['Node', 'Express', 'Handlebars', 'ChartJS', 'MySQL', 'Sequelize', 'ORM', 'API'],
-		code: 'https://github.com/mathcodes/Red-Planet-Voyagers',
-		demo: 'https://team-5-project-2.herokuapp.com/',
-		image: Qkart
-	},
-	{
-		id: 6,
-		projectName: 'A Collection of Python Projects',
-		projectDesc: 'This is a collection of Python projects that I have created. Each project is a live application that I have built using the Python and other technologies listed below. Most focus on either the fundamentals of Python as well as mroe advanced programs inmplementing machine learning, AI, data structures, and algorithms.',
-		tags: ['Python', 'Flask', 'Django', 'Selenium', 'PyNum', 'Sequelize', 'ORM', 'API'],
-		code: 'https://github.com/mathcodes/Red-Planet-Voyagers',
-		demo: 'https://team-5-project-2.herokuapp.com/',
-		image: Qkart
-	},
-	{
-		id: 7,
-		projectName: 'Sweet Clover Barn',
-		projectDesc: ' Met clients at Farmer’s Market, and now their site is modern, responsive, and handling online payments in a beautiful eCommerce site that doubles as a community-based, event-scheduling platform and blog.',
-		tags: ['CSS', 'HTML', 'JS', 'Squarespace', 'Adobe Illustrator'],
-		code: 'www.sweetcloverbarn.com',
-		demo: 'www.sweetcloverbarn.com',
-		image: Qkart
-	},
-	{
-		id: 8,
-		projectName: 'Pro Typer',
-		projectDesc: 'A quick project to review event handlers and do something useful and practical. Use this app to improve your keyboarding skills. FUTURE DEVELOPMENT: Scoring, typing words, difficulty levels, and wpm calculation. Coming soon!',
-		tags: ['HTML', 'CSS', 'JS', 'express'],
-		code: 'https://github.com/mathcodes/monitor',
-		demo: 'https://mathcodes.github.io/pick2hand/',
-		image: Qkart
-	}
-		
+			
 ]

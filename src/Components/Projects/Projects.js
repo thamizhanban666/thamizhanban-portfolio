@@ -17,17 +17,17 @@ function Projects() {
 
     const ViewAllBtn = styled(Button)({
         color: '#fff',
-        backgroundColor: 'purple',
-        transition: 'color 0.2s',
+        backgroundColor: 'var(--txt-sec-darker)',
+        transition: 'all 0.4s',
         "&:hover": {
-            color: '#aaa',
+            color: '#bbb',
             backgroundColor: '#000',
         }
     });
 
     const ViewArr = styled(Box)({
         color: '#fff',
-        backgroundColor: 'purple',
+        backgroundColor: '#9b02d8',
         width: '40px',
         height: '40px',
         padding: '0.5rem',
@@ -56,7 +56,7 @@ function Projects() {
                         alignItems="center"
                         marginBottom={"3rem"}
                     >
-                        <Typography variant='h1' width={"100%"} className="projects">PROJECTS</Typography>
+                        <Typography variant='h1' width={"100%"} className="projects" sx={{fontSize:{xxs:"2.15rem", sm:"3rem"}}}>PROJECTS</Typography>
                     </Grid>
                 </Fade>
                 <Fade bottom duration={2000} distance="50px" >
@@ -84,7 +84,7 @@ function Projects() {
 
                             {projectsData.length > 3 && (
                                 <div className="projects--viewAll">
-                                    <Link to="/projects">
+                                    <Link to="/projects" style={{textDecoration:'none'}}>
                                         <ViewAllBtn>
                                             View All
                                             <ViewArr><HiArrowRight/></ViewArr>

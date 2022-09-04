@@ -41,7 +41,8 @@ function About() {
         paddingTop={{ xxs: "12vh", xs: "12vh", sm:"13vh", md:"15vh", lg: "15vh" }}
         sx={{ minHeight: "100vh", color: "var(--txt)" }} id="about"
       >
-        <Grid container
+        <Grid
+          container
           direction="row"
           justifyContent="center"
           alignItems="center"
@@ -85,7 +86,7 @@ function About() {
                 disableRipple
                 endIcon={<DownloadIcon />}
               >
-                <a href="https://drive.google.com/file/d/1j4TZiLp1k5TlX3iYzDCSwRDiTh38VccM/view?usp=sharing" target="_blank" className='resume'>
+                <a href="https://drive.google.com/file/d/1LgxotdCtgKwdb_ojXQOoptDq5Q1-q_30/view?usp=sharing" target="_blank" rel='noreferrer' className='resume'>
                   Resume
                 </a>
               </ResumeButton>

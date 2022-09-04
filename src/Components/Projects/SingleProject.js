@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaPlay, FaCode } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 import { styled } from '@mui/material/styles'
 import placeholder from '../../Assets/Images/placeholder.png';
 import './SingleProject.css';
-import { Button, Icon } from '@mui/material';
+import { Button, Divider, Icon, Popover, Typography } from '@mui/material';
 
 function SingleProject({ id, name, desc, tags, code, demo, image }) {
 
@@ -27,12 +27,26 @@ function SingleProject({ id, name, desc, tags, code, demo, image }) {
     },
   });
 
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClickPopover = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClosePopover = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const popoverId = open ? 'simple-popover' : undefined;
+
+
 	return (
 		<Fade bottom>
 			<div
 				key={id}
 				className='singleProject'
-				style={{ backgroundColor: '#7c1ca1' }}
+				style={{ backgroundColor: '#9b02d8' }}
 			>
 				<div className='projectContent'>
 					<h2
@@ -67,30 +81,92 @@ function SingleProject({ id, name, desc, tags, code, demo, image }) {
                 />
               </IconBtn>
 						</a>
-						<a
-							href={code}
-							target='_blank'
-							rel='noreferrer'
-							aria-labelledby={`${name
-								.replace(' ', '-')
-								.toLowerCase()} ${name
+						{
+							code.length === 1 ?					
+								<a
+									href={code[0]}
+									target='_blank'
+									rel='noreferrer'
+									aria-labelledby={`${name
+										.replace(' ', '-')
+										.toLowerCase()} ${name
+											.replace(' ', '-')
+											.toLowerCase()}-code`}
+								>
+									<IconBtn>
+										<FaCode
+											id={`${name
+												.replace(' ', '-')
+												.toLowerCase()}-code`}
+											aria-label='Code'
+											style={{
+												fontSize: '1.1rem',
+												transition: 'all 0.2s',
+												'&:hover': {},
+											}}
+										/>
+									</IconBtn>
+								</a>
+								: 
+								<>
+									<Button
+										aria-describedby={popoverId}
+										onClick={handleClickPopover}
+									>
+										<IconBtn>
+											<FaCode
+												id={`${name
+													.replace(' ', '-')
+													.toLowerCase()}-code`}
+												aria-label='Code'
+												style={{
+													fontSize: '1.1rem',
+													transition: 'all 0.2s',
+													'&:hover': {},
+												}}
+											/>
+										</IconBtn>
+									</Button>
+									<Popover
+							id={popoverId}
+							open={open}
+							anchorEl={anchorEl}
+							onClose={handleClosePopover}
+							anchorOrigin={{
+								vertical: 'bottom',
+								horizontal: 'left',
+							}}
+						>
+							<a
+								href={code[0]}
+								target='_blank'
+								rel='noreferrer'
+								aria-labelledby={`${name
 									.replace(' ', '-')
-									.toLowerCase()}-code`}
-            >
-              <IconBtn>
-                <FaCode
-                  id={`${name
-                    .replace(' ', '-')
-                    .toLowerCase()}-code`}
-                  aria-label='Code'
-                  style={{
-                    fontSize: '1.1rem',
-                    transition: 'all 0.2s',
-                    '&:hover': {},
-                  }}
-                />
-              </IconBtn>
-						</a>
+									.toLowerCase()} ${name
+										.replace(' ', '-')
+											.toLowerCase()}-code`}
+								style={{textDecoration:'none'}}
+							>
+								<Typography sx={{ my:0.8,mx:1.5 }}>Frontend</Typography>			
+							</a>
+							<Divider />
+							<a
+								href={code[1]}
+								target='_blank'
+								rel='noreferrer'
+								aria-labelledby={`${name
+									.replace(' ', '-')
+									.toLowerCase()} ${name
+										.replace(' ', '-')
+										.toLowerCase()}-code`}
+								style={{textDecoration:'none'}}
+							>
+								<Typography sx={{ my:0.8,mx:1.5 }}>Backend</Typography>
+							</a>
+									</Popover>
+								</>
+						}
 					</div>
 				</div>
 				<p

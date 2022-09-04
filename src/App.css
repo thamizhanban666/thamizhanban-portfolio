@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Maven+Pro:wght@400;700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
   margin: 0;
@@ -8,7 +9,7 @@
 
 body {
   margin: 0;
-  font-family: "Raleway", serif !important;
+  font-family: 'Poppins', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,6 +29,7 @@ body {
 :root{
   --background-image: linear-gradient(to left, rgb(27, 20, 41), rgb(20 15 35));
   --txt: #fff;
+  --txt-opp: #222;
   --txt-2:#aaa;
   --txt-secondary: #cd5ff8;
   --txt-sec-darker: #b700ff;
@@ -36,8 +38,8 @@ body {
   --bg-primary: rgb(23, 13, 43);
   --bg: #f0ddff;
   --bg-active: rgba(109,32,197,.84);
-  --bg-footer: #0a0416;
-  --backdrop: rgba(0, 0, 0, 0.75);
+  --backdrop: rgba(255, 255, 255, 0.75);
+  --bg-footer:rgba(255, 255, 255, 0.75)
   --nav-active: #c95bf5;
   --border-primary: #8a49a8;
   --logo-primary: #ce5ff8;
@@ -52,6 +54,7 @@ body {
 [data-theme='light']{
   --background-image: linear-gradient(to left, rgb(234, 241, 255),rgb(246, 249, 255));
   --txt: #222;
+  --txt-opp: #fff;
   --txt-2:#666;
   --txt-secondary: #b700ff;
   --txt-sec-darker: #8400b8;
@@ -60,8 +63,8 @@ body {
   --bg-primary: rgb(230, 227, 238);
   --bg: #9411ff;
   --bg-active: rgba(109,32,197,.84);
-  --bg-footer: transparent;
   --backdrop: rgba(0, 0, 0, 0.75);
+  --bg-footer: transparent;
   --nav-active: #c95bf5;
   --border-primary: #8a49a8;
   --logo-primary: #ce5ff8;

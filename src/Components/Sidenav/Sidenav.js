@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { styled } from "@mui/material/styles";
 import DescriptionIcon from '@mui/icons-material/Description';
 import SchoolIcon from '@mui/icons-material/School';
+import CardMembershipIcon from '@mui/icons-material/CardMembership';
 import EmailIcon from '@mui/icons-material/Email';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import DevicesIcon from '@mui/icons-material/Devices';
@@ -82,6 +83,17 @@ const Sidenav = ({ Toggle, SetToggle }) => {
               <span>
                 <Link to="education" spy={true} smooth={true}>
                   <NavButton variant="text" onClick={() => SetToggle(!Toggle)}>Education</NavButton>
+                </Link>
+              </span>
+            </Fade>
+          </Typo>
+
+          <Typo className="sidebarIcons">
+            <CardMembershipIcon />
+            <Fade right duration={2000} distance={"20px"}>
+              <span>
+                <Link to="certification" spy={true} smooth={true}>
+                  <NavButton variant="text" onClick={() => SetToggle(!Toggle)}>CERTIFICATION</NavButton>
                 </Link>
               </span>
             </Fade>

@@ -6,20 +6,22 @@ import Skills from '../Skills/Skills';
 import SocialIcons from '../SocialIcons/SocialIcons';
 import Education from '../Education/Education';
 import Contact from '../Contact/Contact';
+import Certification from '../Certification/Certification';
 import './Main.css'
 
 
 function Main() {
     return (
         <>
-            <div className="pc-device">
+            {/* <div className="pc-device">
                 <SocialIcons />
-            </div>
+            </div> */}
             <Header />
             <About />
             <Skills />
             <Projects />
             <Education />
+            <Certification />
             <Contact />
         </>
     )

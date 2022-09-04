@@ -1,13 +1,14 @@
 .contact {
     display: inline-block;
-    color: #ffc200;
+    color: var(--txt-secondary);
     opacity: 0.9;
     overflow: hidden;
     letter-spacing: 0.01em !important;
     text-transform: capitalize !important;
-    font-size: 3rem !important;
+    /* font-size: 3rem !important; */
     position: relative;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    /* background-color: rgba(195, 0, 255, 0.07); */
 }
 
 .contact::before {
@@ -23,33 +24,142 @@
     opacity: 0.7;
 }
 
-.mobile_buttons {
-    display: none;
+.contacts-body {
+  width: 100%;
 }
 
-.heart {
-    color: #ffc200;
-    padding-top: 8px;
+
+.contacts-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  /* flex: 0.6; */
+  /* box-sizing: border-box; */
+  padding-left: 7rem;
+  margin-top: 1.2rem;
 }
 
-.mobile-icons {
-    fill: #fff;
-    opacity: 0.7;
-    transition: 0.1s linear;
+.contacts-details > a {
+    width: fit-content;
 }
 
-.mobile-icons:hover {
-    fill: #ffc200;
+.personal-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.personal-details p {
+  margin-left: 1.5rem;
+  font-size: 18px;
+  line-height: 110%;
+  font-weight: 500;
+  font-family: "poppins", sans-serif;
+  word-break: break-word;
+}
+
+.personal-details > p > a {
+    border: 2px solid transparent;
+    border-radius: 0.7rem;
+    /* padding: 0.5rem; */
+    text-decoration: none;
+    color: var(--txt);    
+    transition: all 0.3s ease-in-out;
+}
+
+.personal-details > p :hover {
+    border: 2px solid var(--txt);
+    border-radius: 0.7rem;
+    padding: 0.5rem;
+    color: var(--txt-sec-darker);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.socialmedia-icons {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.footer {
+  font-family: 'poppins', sans-serif;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-weight: 500;
+  font-family: 'poppins', sans-serif;
+  font-size: 15px;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .contacts-details {
+    padding-left: 4rem;
+  }
+
+  .personal-details p {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .contacts-details {
+    padding-left: 0rem;
+    margin-top: 2rem;
+  }
+
+  .personal-details {
+    margin-bottom: 1.8rem;
+  }
+
+  .personal-details p {
+    margin-left: 1.2rem;
+    width: 95%;
+  }
+
+  .socialmedia-icons {
+    gap: 3rem;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
-    .helloBtn {
-        font-size: 14px !important;
-    }
+  .contacts-details {
+    padding-left: 0rem;
+    padding: 0rem;
+    margin-top: 2rem;
+  }
+
+  .socialmedia-icons {
+    gap: 2rem;
+  }
+
 }
 
-@media screen and (max-width: 768px) {
-    .mobile_buttons {
-        display: block;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+  .contacts-details {
+    padding-left: 0rem;
+    padding: 0rem;
+  }
+  .socialmedia-icons {
+    gap: 1rem;
+  }
 }

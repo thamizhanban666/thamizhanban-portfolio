@@ -120,6 +120,9 @@ export default function Header() {
                         <Buttondata disableRipple className='navBtn2'>
                             <Link to="education" spy={true} smooth={true} offset={20} duration={500}>Education</Link>
                         </Buttondata>
+                        <Buttondata disableRipple className='navBtn2'>
+                            <Link to="certification" spy={true} smooth={true} offset={20} duration={500}>Certification</Link>
+                        </Buttondata>
                         {/* <Buttondata disableRipple className='navBtn2'>
                             <Link to="experience" spy={true} smooth={true} offset={50} duration={500}>Experience</Link>
                         </Buttondata> */}

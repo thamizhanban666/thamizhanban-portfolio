@@ -4,7 +4,7 @@ const muiTheme = createTheme({
     typography: {
         h1: {
             fontFamily: "Maven Pro",
-            fontSize: "2.30rem",
+            fontSize: "2rem",
             fontWeight: "600",
         },
         h3: {

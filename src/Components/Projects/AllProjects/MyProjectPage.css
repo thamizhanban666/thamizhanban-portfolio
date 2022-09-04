@@ -37,7 +37,7 @@
 }
 
 .projectPage-header>h1 {
-  color: var(--txt-sec-darker);
+  color: var(--txt-secondary);
   font-size: 3rem;
   margin-left: 4rem;
   /* font-family: var(--primaryFont); */

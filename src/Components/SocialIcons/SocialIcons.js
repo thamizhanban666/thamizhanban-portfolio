@@ -37,7 +37,7 @@ const SocialIcons = () => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href="https://github.com/yogitavlog"
+          href="#"
           rel="noreferrer"
         >
           <SocialGithub width={22} height={22} className="icons"/>
@@ -51,7 +51,7 @@ const SocialIcons = () => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href="https://www.instagram.com/yogitavarshney1999/"
+          href="#"
           rel="noreferrer"
         >
           <Instagram width={22} height={22} className="icons"/>
@@ -65,7 +65,7 @@ const SocialIcons = () => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href="https://twitter.com/YogitaVarshney4"
+          href="#"
           rel="noreferrer"
         >
           <Twitter width={22} height={22} className="icons"/>
@@ -79,7 +79,7 @@ const SocialIcons = () => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href="https://www.linkedin.com/in/yogita-varshney-5a42401b5/"
+          href="#"
           rel="noreferrer"
         >
           <LinkedIn width={22} height={22} className="icons"/>

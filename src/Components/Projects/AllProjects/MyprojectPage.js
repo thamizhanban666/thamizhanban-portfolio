@@ -11,6 +11,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { MyContext } from '../../../App'
 
+
 function ProjectPage() {
 
 	const { theme, setTheme } = useContext(MyContext);
@@ -21,11 +22,11 @@ function ProjectPage() {
 	return (
 		<Box>
 			<div className="projectPage-header">
-				<Link to="/">
+				<Button onClick={()=>window.history.back()}>
 					<Box className={"back-box"}>
 						<ArrowBack className={"back-btn"} />
 					</Box>
-				</Link>
+				</Button>
 				<h1>Projects</h1>
 				<Box onClick={switchTheme} sx={{cursor:"pointer", ml:"auto"}} >
 						{theme === 'dark' ?

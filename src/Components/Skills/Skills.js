@@ -4,7 +4,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 import { styled } from '@mui/material/styles';
 import './Skills.css';
-import Fade from 'react-reveal/Fade';
+import { Fade, Flip } from 'react-reveal';
 import GreetingLottie from '../GreetingLottie';
 import htmlIcon from '../../Assets/svg-images/html-icon.svg'
 import cssIcon from '../../Assets/svg-images/css-icon.svg'
@@ -49,7 +49,7 @@ function Skills() {
                         marginBottom={"3rem"}
                     >
 
-                        <Typography variant='h1' width={"100%"} className="skills">SKILLS</Typography>
+                        <Typography variant='h1' width={"100%"} className="skills" sx={{fontSize:{xxs:"2.15rem", sm:"3rem"}}}>SKILLS</Typography>
 
                     </Grid>
                 </Fade>
@@ -70,78 +70,102 @@ function Skills() {
 
                         <Grid item xxs={12} xs={12} sm={12} md={12} lg={7} className="skillContainer">
                             <Stack sx={{ marginTop: "20px", color: "gray", display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={htmlIcon} alt="HTML5" />
                                     </Box>
                                     <InnerText>HTML5</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={cssIcon} alt="CSS3"/>
                                     </Box>
                                     <InnerText>CSS3</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={javascriptIcon} alt="JS"/>
                                     </Box>
                                     <InnerText>JavaScript</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={reactIcon} alt="React"/>
                                     </Box>
                                     <InnerText>React</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={bootstrapIcon} alt="Bootstrap"/>
                                     </Box>
                                     <InnerText>Bootstrap</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={muiIcon} alt="MUI"/>
                                     </Box>
                                     <InnerText>Material UI</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={nodejsIcon} alt="Node.js"/>
                                     </Box>
                                     <InnerText>Node.js</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={mongodbIcon} alt="MongoDB"/>
                                     </Box>
                                     <InnerText>MongoDB</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={mysqlIcon} alt="MySQL"/>
                                     </Box>
                                     <InnerText>My SQL</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={githubIcon} alt="Github"/>
                                     </Box>
                                     <InnerText>Github</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={vscodeIcon} alt="VScode"/>
                                     </Box>
                                     <InnerText>VS code</InnerText>
                                 </Box>
+                                </Flip>
+                                <Flip left duration={2000}>
                                 <Box className="skillItem">
                                     <Box className={"icon-box"}>
                                         <img src={postmanIcon} alt="Postman" style={{ width: "42px",height:"42px"}} />
                                     </Box>
                                     <InnerText>Postman</InnerText>
                                 </Box>
+                                </Flip>
 
                             </Stack>
                         </Grid>
